@@ -34,7 +34,7 @@ RUN mkdir android && cd android && \
 # Install nodejs
 RUN apt-get update -y && apt-get install --no-install-recommends -y -q curl python build-essential git ca-certificates && \
     mkdir /nodejs && \
-    curl http://nodejs.org/dist/v8.7.0/node-v8.7.0-linux-x86.tar.gz | tar xvzf - -C /nodejs --strip-components=1 && \
+    curl http://nodejs.org/dist/v8.9.1/node-v8.9.1-linux-x86.tar.gz | tar xvzf - -C /nodejs --strip-components=1 && \
     chown -R 1000 /nodejs
 
 # Install yarn
