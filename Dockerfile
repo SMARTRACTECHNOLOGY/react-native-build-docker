@@ -30,6 +30,7 @@ RUN mkdir android && cd android && \
     echo y | android update sdk --no-ui --all --filter ${ANDROID_APIS} && \
     # echo y | android update sdk --no-ui --all --filter build-tools-${ANDROID_BUILD_TOOLS_VERSION_25} && \
     # echo y | android update sdk --no-ui --all --filter build-tools-${ANDROID_BUILD_TOOLS_VERSION_23} && \
+    echo y | android update sdk --no-ui --all --filter build-tools-26.0.0,build-tools-26.0.1,build-tools-26.0.2,build-tools-26.0.3 && \
     echo y | android update sdk --no-ui --all --filter build-tools-25.0.0,build-tools-25.0.1,build-tools-25.0.2,build-tools-25.0.3 && \
     echo y | android update sdk --no-ui --all --filter build-tools-23.0.0,build-tools-23.0.1,build-tools-23.0.2,build-tools-23.0.3 && \
     chmod a+x -R $ANDROID_HOME && \
