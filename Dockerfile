@@ -6,6 +6,7 @@ LABEL maintainer="SMART COSMOS Platform Core Team" \
 ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/tools_r25.0.2-linux.zip" \
     ANDROID_BUILD_TOOLS_VERSION_26="build-tools-26.0.0,build-tools-26.0.1,build-tools-26.0.2,build-tools-26.0.3" \
     ANDROID_BUILD_TOOLS_VERSION_25="build-tools-25.0.0,build-tools-25.0.1,build-tools-25.0.2,build-tools-25.0.3" \
+    ANDROID_BUILD_TOOLS_VERSION_24="build-tools-24.0.0,build-tools-24.0.1,build-tools-24.0.2,build-tools-24.0.3" \
     ANDROID_BUILD_TOOLS_VERSION_23="build-tools-23.0.0,build-tools-23.0.1,build-tools-23.0.2,build-tools-23.0.3" \
     ANDROID_APIS="android-17,android-18,android-19,android-20,android-21,android-22,android-23,android-24,android-25,android-26" \
     GRADLE_HOME="/usr/share/gradle" \
@@ -31,6 +32,7 @@ RUN mkdir android && cd android && \
     echo y | android update sdk --no-ui --all --filter ${ANDROID_APIS} && \
     echo y | android update sdk --no-ui --all --filter ${ANDROID_BUILD_TOOLS_VERSION_26} && \
     echo y | android update sdk --no-ui --all --filter ${ANDROID_BUILD_TOOLS_VERSION_25} && \
+    echo y | android update sdk --no-ui --all --filter ${ANDROID_BUILD_TOOLS_VERSION_24} && \
     echo y | android update sdk --no-ui --all --filter ${ANDROID_BUILD_TOOLS_VERSION_23} && \
     chmod a+x -R $ANDROID_HOME && \
     chown -R root:root $ANDROID_HOME
